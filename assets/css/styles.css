@@ -1,0 +1,168 @@
+/* General Styling */
+
+.container {
+    background-color: #ededed;
+    min-height: 100vh;
+}
+
+
+.nav-bar {
+    background-color: #009688;
+}
+
+.content-area {
+    background-color: #fff;
+    color: #212121;
+}
+
+#nav-bar li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    margin: 0;
+}
+
+#nav-bar li:nth-child(1) {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+.nav-bar, .main-section, .side-bar, .end-content {
+    padding: 1em 2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.end-content {
+    background-color: #757575;
+    padding: 2em;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+aside {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.side-bar li {
+    display: inline;
+    list-style-type: none;
+    font-size: 2.6em;
+}
+
+
+/* CSS Grid */
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr; 
+    grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
+}
+
+.nav-bar, .end-content {
+    grid-column: span 8;
+}
+
+
+
+
+.main-section {
+    grid-column: 2/ span 3;
+    max-width: 650px
+    /* border: 3px dashed black; */
+}
+
+.sidebar {
+    grid-column: 7 / span 2;
+    max-width: 270px;
+}
+
+
+
+/* Flexbox */
+
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+#nav-bar li:nth-child(1) {
+    margin-right: auto;
+    margin-left: 240px;
+}
+
+/* h1 {
+    margin-right: auto;
+    margin-left: 100px;
+    margin-top: 20px;
+} 
+
+
+
+
+
+
+
+/* li:nth-child(2) {
+    font-size: 1.3rem;
+}
+
+li:nth-child(3) {
+    font-size: 1.3rem;
+}
+
+li:nth-child(4) {
+    font-size: 1.3rem;
+} */
+
+/* font-family: 'Roboto', sans-serif;
+
+font-family: 'Roboto Condensed', sans-serif;
+
+font-family: 'Alegreya Sans', sans-serif;
+
+font-family: 'Merriweather Sans', sans-serif;
+
+font-family: 'Nunito', sans-serif;
+
+font-family: 'Nunito Sans', sans-serif;
+
+font-family: 'Roboto Slab', serif;
+
+font-family: 'Roboto Mono', monospace; */
+
+
+
+
+/* .mdl-shadow--2dp {
+ box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)
+}
+.mdl-shadow--3dp {
+ box-shadow:0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.2),0 1px 8px 0 rgba(0,0,0,.12)
+}
+.mdl-shadow--4dp {
+ box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)
+}
+.mdl-shadow--6dp {
+ box-shadow:0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2)
+}
+.mdl-shadow--8dp {
+ box-shadow:0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2)
+}
+.mdl-shadow--16dp {
+ box-shadow:0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)
+}
+.mdl-shadow--24dp {
+ box-shadow:0 9px 46px 8px rgba(0,0,0,.14),0 11px 15px -7px rgba(0,0,0,.12),0 24px 38px 3px rgba(0,0,0,.2)
+} */
