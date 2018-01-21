@@ -58,61 +58,6 @@ aside {
 }
 
 
-/* CSS Grid */
-
-
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr; 
-    grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
-}
-
-.nav-bar, .end-content {
-    grid-column: span 8;
-}
-
-
-
-
-.main-section {
-    grid-column: 2/ span 3;
-    max-width: 650px
-    /* border: 3px dashed black; */
-}
-
-.sidebar {
-    grid-column: 7 / span 2;
-    max-width: 270px;
-}
-
-
-
-/* Flexbox */
-
-
-#nav-bar {
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
-}
-
-#nav-bar li:nth-child(1) {
-    margin-right: auto;
-    margin-left: 240px;
-}
-
-/* h1 {
-    margin-right: auto;
-    margin-left: 100px;
-    margin-top: 20px;
-} 
-
-
-
-
-
-
 
 /* li:nth-child(2) {
     font-size: 1.3rem;
