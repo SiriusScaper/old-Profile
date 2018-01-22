@@ -1,9 +1,69 @@
+/* General Styling */
+.container {
+    background-color: #ededed;
+}
+
+.nav-bar {
+    background-color: #009688;
+}
+
+.nav-bar a {
+    color: #f2f2f2;
+    padding: 38px 16px;
+    text-decoration: none;
+    font-size: 1.3em;
+  }
+  
+  .nav-bar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-bottom: solid 3px 
+  }
+
+.active {
+    background-color: #FF5252;
+    color: white;
+  }
+
+.nav-bar .icon {
+    display: none;
+  }
+
+.side-bar {
+    display: inline;
+    list-style-type: none;
+    font-size: 2.6em;
+}
+
+
+.nav-bar, .main-section, .side-bar, .end-content {
+    padding: 1em 2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+.end-content {
+    background-color: #757575;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+aside {
+    color: #fff;
+    font-size: 0.8em;
+}
+
 /* CSS Grid */
-
-
 
 .container {
     display: grid;
+    min-height: 100vh;
     grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr; 
     grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
 }
@@ -13,9 +73,8 @@
 }
 
 
-
-
 .main-section {
+    display: grid;
     grid-column: 2/ span 3;
     max-width: 650px
     /* border: 3px dashed black; */
@@ -30,6 +89,8 @@
 .end-content {
     display: grid;
     justify-items: center;
+    line-height: 6;
+    padding: 0 20px;
 }
 
 
@@ -38,18 +99,38 @@
 
 
 #nav-bar {
-    display: flex;
+    display: grid;
     align-items: center;
     flex: 0 0 auto;
 }
 
-#nav-bar li:nth-child(1) {
+
+
+/* #nav-bar li:nth-child(1) {
     margin-right: auto;
     margin-left: 240px;
-}
+} */
 
-/* h1 {
-    margin-right: auto;
-    margin-left: 100px;
-    margin-top: 20px;
-} 
+
+@media screen and (max-width: 600px) {
+    .nav-bar a:not(:first-child) {display: none;}
+    .nav-bar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  
+  @media screen and (max-width:600px) {
+    .nav-bar.responsive {position: relative;}
+    .nav-bar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav-bar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
